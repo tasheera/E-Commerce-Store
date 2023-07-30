@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" >
+    <link rel="stylesheet" href="CSS/payement.css">
+    
+</head>
+    <body >
+    <div class="container">
+    <form  action="ordercomplete.html">
+            <h2 class="head">Order Summary</h2>
+            <P>Amount: <i>$</i> <span id="amount">0</span></P>
+            <div class="items">
+                <div class="content">
+                    <h2>BILLING ADDRESS</h2>
+                    <div class="tag">
+                        <label for="name">Full Name : </label><br>
+                        <input type="text" name="name" id="name" size="38" placeholder="name" required>
+                    </div>
+                    <div class="tag">
+                        <label for="email">Email : </label><br>
+                        <input type="email" name="email" id="email" placeholder="name@email.com" required>
+                    </div>
+                    <div class="tag">
+                        <label for="address">Address : </label><br>
+                        <input type="text" name="address" id="address" placeholder="address" required>
+                    </div>
+                    <div class="tag">
+                        <label for="city">City : </label><br>
+                        <input type="text" name="city" id="city" placeholder="Colombo" required>
+                    </div>  
+                    <div class="dividepart">
+                        <div class="tag">
+                        <label for="district">State : </label><br>
+                        <input type="text" name="district" id="district" size="10" placeholder="Sri Lanka" required>
+                        </div>
+                        <div class="tag">
+                        <label for="postalcode">Postal Code : </label><br>
+                        <input type="text" name="postalcode" id="postalcode" size="10" placeholder="123 456" required>
+                        </div>
+                    </div>  
+
+                </div>
+
+
+            <div class="items">
+
+            <div class="content">
+                <h2>PAYMENT</h2>
+                <div class="tag">
+                    <label for="card">Cards Accepted: </label><br>
+                    <img src="images/card_img.png" alt="card" >
+                </div>
+                <div class="tag">
+                    <label>name on card :</label><br>
+                    <input type="text" placeholder="Mr. Name" required>
+                </div>
+                <div class="tag">
+                    <label>credit card number :</label><br>
+                    <input type="number" placeholder="1111-2222-3333-4444" id="card" onchange="validateCreditCard()" required>
+                </div>
+                <div class="tag">
+                    <label>exp month :</label><br>
+                    <select id='month' onchange="creditCardYear()" required>
+                        <option value=''>--Select Month--</option>
+                        <option value='1'>Janaury</option>
+                        <option value='2'>February</option>
+                        <option value='3'>March</option>
+                        <option value='4'>April</option>
+                        <option value='5'>May</option>
+                        <option value='6'>June</option>
+                        <option value='7'>July</option>
+                        <option value='8'>August</option>
+                        <option value='9'>September</option>
+                        <option value='10'>October</option>
+                        <option value='11'>November</option>
+                        <option value='12'>December</option>
+                        </select>
+                </div>
+
+                <div class="dividepart">
+                    <div class="tag">
+                        <label>exp year :</label><br>
+                        <input type="number" placeholder="2022" id="year" onchange="creditCardYear()" required>
+                    </div>
+                    <div class="tag">
+                        <label>CVV : </label><br>
+                        <input type="text" placeholder="123" size="10" id="cvv" onchange="validateCvv()" required>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </div>
+
+
+
+            <button type="submit" id="checkout">Proceed To Checkout</button>
+
+        
+        
+            <script src="JS/paymentscript.js"></script>     <!--Link javascript file-->
+    </form>
+    </div>
+    </body>
+</html>
