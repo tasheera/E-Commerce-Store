@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store</title>
+        <link rel="icon" href="logo.png" type="image/x-icon" >
+        <link rel="stylesheet" href="CSS/common.css" />
+        <link rel="stylesheet" href="CSS/shop_styles.css" />
+    </head>
+
+    <body>
+        
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <div class="icon">
+              <h2 class="logo">XpertsGear</h2>
+            </div>
+    
+            <div class="menu">
+              <ul>
+                <li><a href="store.html">SHOP</a></li>
+
+              </ul>
+            </div>
+          </nav>
+        <!--Navigation bar end-->
+
+
+        
+                <!-- side menu -->
+                <div id="mySidenav" class="sidebar">
+                    <button class="closebtn" onclick="closeNav()">&times;</button>
+                <!-- Cart-section -->
+                    <div class="cart">
+                    <h1 >Cart items</h1>
+                    <hr>
+                    <br>
+                    <table id="myTable">
+                        <tr>
+                            <th>Item</th>
+                            <th></th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+        
+                    </table> 
+                    <script src="JS/cartscript.js"></script> <!--Link javascript file-->
+                    
+                    <p >Total Price : $<span id="totalPrice">0</span> <span id="currency"> </span> </p>
+                    <form name="frm">
+                        <label for="name">Name: </label><input type="text" name="name" id="name" placeholder="Name" size="30"><br><br>
+                        <label for="email">Email: &nbsp;</label><input type="email" name="email" id="email" placeholder="name@email.com" size="30">
+                    </form>
+                    <p><button  class="placeOrder" onclick="itemCheck()">Place Order</button></p>
+                    <br>
+                    </div>
+                </div>
+                <!-- end side menu -->
+
+
+
+      <div id="navbar-cart"><button onclick="openNav()">  <img src="images/cart-24.png" alt="cart"><span id="count"></span></button></div>
+    
+        <!-- container content section -->
+        <section class="container">
+            <h2>Shop more and Enjoy</h2>
+            <div class="items">
+
+                <!-- item1 -->
+
+                <div class="item">
+                    <span class="item-title">Gray Nicolls Cricket Bat</span>
+                    <img class="item-image" src="images/bat1.png" alt="gray nicolls cricket bat"> <!--https://nccc.co.uk/shop/gray-nicolls-academy-cricket-bat/-->
+                    <div class="item-details">
+                        <span class="item-price">$100.99</span>
+                        <button class="item-button" type="button" onclick="myfunc1()">Added to cart</button>
+                    </div>
+                </div>
+
+                 <!-- item2 -->
+
+                <div class="item">
+                    <span class="item-title">Asics GEL Cricket Shoes</span>
+                    <img class="item-image" src="images/shoes2.jpg" alt="Asics GEL Cricket Shoes"> <!--https://www.rebelsport.com.au/p/asics-gel-350-not-out-spike-cricket-shoes-M63711101.html-->
+                    <div class="item-details">
+                        <span class="item-price">$120.99</span>
+                        <button class="item-button" type="button" onclick="myfunc2()">Added to cart</button>
+                    </div>
+                </div>
+
+                <!-- item3 -->
+
+                <div class="item">
+                    <span class="item-title">KOOKABURRA PRO HELMET</span>
+                    <img class="item-image" src="images/helmet.png" alt="KOOKABURRA PRO 600 HELMET"> <!--https://koroyd.com/products/sport/helmets/shrey-koroyd-->
+                    <div class="item-details">
+                        <span class="item-price">$71.29</span>
+                        <button class="item-button" type="button" onclick="myfunc3()">Added to cart</button>
+                    </div>
+                </div>
+
+                <!-- item4 -->
+
+                <div class="item">
+                    <span class="item-title">WICKET KEEPING GLOVES</span>
+                    <img class="item-image" src="images/gloves.jpg" alt="WICKET KEEPING GLOVES"> <!--https://www.amazon.in/DSC-Intense-Attitude-Leather-Cricket/dp/B0B758QCNF-->
+                    <div class="item-details">
+                        <span class="item-price">$19.99</span>
+                        <button class="item-button" type="button" onclick="myfunc4()">Added to cart</button>
+                    </div>
+                </div>
+
+                <!-- item5 -->
+
+                <div class="item">
+                    <span class="item-title" id="5id">GN CROWN CRICKET BALL</span>
+                    <img class="item-image" src="images/cricketball1.jpg" alt="GN CROWN CRICKET BALL"> <!--https://www.talentcricket.co.uk/-->
+                    <div class="item-details">
+                        <span class="item-price">$19.99</span>
+                        <button class="item-button" type="button" onclick="myfunc5()">Added to cart</button>
+                    </div>
+                </div>
+
+                <!-- item6 -->
+
+                <div class="item">
+                    <span class="item-title" id="6id">GN CREST CRICKET BALL</span>
+                    <img class="item-image" src="images/cricketball2.jpg" alt="GN CREST CRICKET BALL">  <!--https://www.talentcricket.co.uk/-->
+                    <div class="item-details">
+                        <span class="item-price">$55.99</span>
+                        <button class="item-button" type="button" onclick="myfunc6()" >Added to cart</button> 
+                    </div>
+                </div>                
+
+            </div>
+        </section>
+
+        <br><br><br>
+        <!--footer-->
+        <footer class="footer">
+            <div class="social">
+              <a href="https://www.instagram.com/accounts/login/"><img src="images/instagram.png" alt="instagram"></a>
+              <a href="https://www.snapchat.com/en-US"><img src="images/snapchat.png" alt="snapchat"></a>
+              <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><img src="images/twitter.png" alt="twitter"></a>
+              <a href="https://web.facebook.com/login/?_rdc=1&_rdr"><img src="images/facebook..png" alt="facebook"></a>
+              
+            </div>
+            </footer>
+
+    </body>
+
+</html>
